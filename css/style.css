@@ -33,12 +33,6 @@ main {
   background-image: url("../images/backs/blue.svg");
 }
 
-/* .card-outline {
-  background-image: none;
-  background-color: rgba(200, 200, 200, 0.5);
-  border: 0.15rem dashed #202d7a;
-} */
-
 /* Button */
 .btn {
   padding: 1rem;
