@@ -103,3 +103,10 @@ function handleDraw() {
   compareCards();
   checkWinner();
 }
+
+// Randomly removes one card from the deck
+function drawCard() {
+  const idx = Math.floor(Math.random() * deck.length);
+  // Return card strings from the deck array
+  return deck.splice(idx, 1)[0];
+}
