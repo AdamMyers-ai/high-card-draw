@@ -103,8 +103,6 @@ function handleDraw() {
   if (gameOver === true) return;
   if (deck.length < 2) return;
 
-  round++;
-
   playerCard = drawCard();
   dealerCard = drawCard();
 
@@ -168,14 +166,16 @@ function compareCards() {
   const dealerValue = getCardValue(dealerCard);
 
   if (playerValue > dealerValue) {
+    round++;
     playerScore++;
     playerScoreEl.textContent = playerScore;
     roundMessageEl.textContent = `Round ${round}: Player wins the round!`;
   } else if (dealerValue > playerValue) {
+    round++;
     dealerScore++;
     dealerScoreEl.textContent = dealerScore;
     roundMessageEl.textContent = `Round ${round}: Dealer wins the round!`;
   } else {
-    roundMessageEl.textContent = "It's a tie!";
+    roundMessageEl.textContent = "It's a tie! Draw again.";
   }
 }
