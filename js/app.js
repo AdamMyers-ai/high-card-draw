@@ -171,11 +171,11 @@ function compareCards() {
   if (playerValue > dealerValue) {
     playerScore++;
     playerScoreEl.textContent = playerScore;
-    roundMessageEl.textContent = "Player wins the round!";
+    roundMessageEl.textContent = `Round ${round}: Player wins the round!`;
   } else if (dealerValue > playerValue) {
     dealerScore++;
     dealerScoreEl.textContent = dealerScore;
-    roundMessageEl.textContent = "Dealer wins the round!";
+    roundMessageEl.textContent = `Round ${round}: Dealer wins the round!`;
   } else {
     roundMessageEl.textContent = "It's a tie!";
   }
