@@ -135,16 +135,17 @@ function getCardValue(card) {
 }
 
 function checkWinner() {
-  if (round === maxRounds && playerScore > dealerScore) {
+  if (round === maxRounds) {
     gameOver = true;
-
     drawBtnEl.textContent = "Game Over";
-    roundMessageEl.textContent = "Player wins!";
-  } else if (round === maxRounds && dealerScore > playerScore) {
-    gameOver = true;
 
-    drawBtnEl.textContent = "Game Over";
-    roundMessageEl.textContent = "Dealer wins!";
+    if (playerScore > dealerScore) {
+      roundMessageEl.textContent = "Player wins the game!";
+    } else if (dealerScore > playerScore) {
+      roundMessageEl.textContent = "Dealer wins the game!";
+    } else {
+      roundMessageEl.textContent = "The game is a tie!";
+    }
   }
 }
 
