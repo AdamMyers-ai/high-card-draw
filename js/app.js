@@ -122,8 +122,12 @@ function compareCards() {
 
   if (playerValue > dealerValue) {
     playerScore++;
+
+    playerScoreEl.innerHTML = playerScore;
   } else if (dealerValue > playerValue) {
     dealerScore++;
+
+    dealerScoreEl.innerHTML = dealerScore;
   }
 }
 
