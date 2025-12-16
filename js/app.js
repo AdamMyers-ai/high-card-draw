@@ -116,6 +116,17 @@ function renderCards() {
   dealerCardEl.className = `card card-large card-shadow ${dealerCard}`;
 }
 
+function compareCards() {
+  const playerValue = getCardValue(playerCard);
+  const dealerValue = getCardValue(dealerCard);
+
+  if (playerValue > dealerValue) {
+    playerScore++;
+  } else if (dealerValue > playerValue) {
+    dealerScore++;
+  }
+}
+
 function getCardValue(card) {
   // removes the first char of card string
   const rank = card.slice(1);
