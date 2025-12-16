@@ -1,5 +1,5 @@
 // Constants
-const maxRounds = 5;
+const maxRounds = 10;
 
 // Variables
 let deck;
