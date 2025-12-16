@@ -13,6 +13,17 @@ main {
   text-align: center;
 }
 
+h1 {
+  margin-bottom: 50px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  gap: 10px;
+}
+
 .play-area {
   display: flex;
   justify-content: center;
@@ -22,7 +33,7 @@ main {
 
 /* Card Modifiers */
 .card-large {
-  font-size: 26px;
+  font-size: 25px;
 }
 
 .card-shadow {
@@ -47,4 +58,3 @@ main {
 .btn:hover {
   background-color: white;
 }
-

@@ -14,6 +14,9 @@ let gameOver;
 const playerCardEl = document.querySelector("#player-card");
 const dealerCardEl = document.querySelector("#dealer-card");
 const drawBtnEl = document.querySelector("#draw-btn");
+const playerScoreEl = document.querySelector("#player-score");
+const dealerScoreEl = document.querySelector("#dealer-score");
+const roundMessageEl = document.querySelector("#round-message");
 
 // Event Listeners
 drawBtnEl.addEventListener("click", handleDraw);
