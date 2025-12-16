@@ -86,14 +86,14 @@ function init() {
   dealerScore = 0;
   round = 0;
   gameOver = false;
+  drawBtnEl.textContent = "Draw Cards";
+  roundMessageEl.textContent = `Click "Draw Cards" To Start!`;
 
   resetBoard();
 }
 
 function resetGame() {
   init();
-  drawBtnEl.textContent = "Draw Cards";
-  roundMessageEl.textContent = `Click "Draw Cards" To Start!`;
 }
 
 init();
@@ -143,17 +143,16 @@ function getCardValue(card) {
 }
 
 function checkWinner() {
-  if (round === maxRounds && playerScore > dealerScore) {
-    gameOver = true;
-    drawBtnEl.textContent = "Game Over";
+  if (round !== maxRounds) return;
+
+  gameOver = true;
+  drawBtnEl.textContent = "Game Over";
+
+  if (playerScore > dealerScore) {
     roundMessageEl.textContent = "Player wins the game!";
-  } else if (round === maxRounds && dealerScore > playerScore) {
-    gameOver = true;
-    drawBtnEl.textContent = "Game Over";
+  } else if (dealerScore > playerScore) {
     roundMessageEl.textContent = "Dealer wins the game!";
-  } else if (round === maxRounds && playerScore === dealerScore) {
-    gameOver = true;
-    drawBtnEl.textContent = "Game Over";
+  } else {
     roundMessageEl.textContent = "The game is a tie!";
   }
 }
