@@ -26,7 +26,7 @@ main {
 }
 
 .card-shadow {
-  box-shadow: 7px 7px 7px rgba(50, 50, 50, 0.95);
+  box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.95);
 }
 
 .card-back {
@@ -47,3 +47,4 @@ main {
 .btn:hover {
   background-color: white;
 }
+
