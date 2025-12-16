@@ -21,6 +21,7 @@ const resetBtnEl = document.querySelector("#reset-btn");
 
 // Event Listeners
 drawBtnEl.addEventListener("click", handleDraw);
+resetBtnEl.addEventListener("click", resetGame);
 
 // Functions
 function init() {
@@ -170,4 +171,8 @@ function compareCards() {
   } else {
     roundMessageEl.textContent = "It's a tie!";
   }
+}
+
+function resetGame() {
+  console.log("Reset clicked");
 }
