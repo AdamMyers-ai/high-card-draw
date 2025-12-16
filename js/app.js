@@ -85,7 +85,7 @@ function init() {
   round = 0;
   gameOver = false;
 
-  resetBoard();
+  // resetBoard();
 }
 
 init();
@@ -134,21 +134,6 @@ function getCardValue(card) {
   }
 }
 
-function compareCards() {
-  const playerValue = getCardValue(playerCard);
-  const dealerValue = getCardValue(dealerCard);
-
-  if (playerValue > dealerValue) {
-    playerScore++;
-
-    playerScoreEl.innerHTML = playerScore;
-  } else if (dealerValue > playerValue) {
-    dealerScore++;
-
-    dealerScoreEl.innerHTML = dealerScore;
-  }
-}
-
 function checkWinner() {
   if (round === maxRounds && playerScore > dealerScore) {
     gameOver = true;
@@ -164,6 +149,21 @@ function checkWinner() {
 }
 
 function resetBoard() {
-  playerCardEl.className("card card-large card-back card-shadow");
-  dealerCardEl.className("card card-large card-back card-shadow");
+  playerCardEl.className = "card card-large card-back card-shadow";
+  dealerCardEl.className = "card card-large card-back card-shadow";
+}
+
+function compareCards() {
+  const playerValue = getCardValue(playerCard);
+  const dealerValue = getCardValue(dealerCard);
+
+  if (playerValue > dealerValue) {
+    playerScore++;
+    playerScoreEl.textContent = playerScore;
+    roundMessageEl.textContent = "Player wins the round!";
+  } else if (dealerValue > playerValue) {
+    dealerScore++;
+    dealerScoreEl.textContent = dealerScore;
+    roundMessageEl.textContent = "Dealer wins the round!";
+  }
 }
