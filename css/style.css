@@ -1,5 +1,5 @@
 body {
-  background-color: darkgray;
+  background-color: lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,6 @@ main {
 
 h1 {
   margin-bottom: 50px;
-  margin-top: 40px;
   text-shadow: 0 0 10px aqua, 0 0 20px blueviolet, 0 0 30px blueviolet,
     0 0 40px aqua;
 }
@@ -34,13 +33,13 @@ h1 {
   text-shadow: 0 0 10px aqua, 0 0 20px blueviolet, 0 0 30px blueviolet,
     0 0 40px aqua;
   font-weight: 700;
+  margin-bottom: 35px;
 }
 
 .play-area {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin: 30px 0;
 }
 
 /* Card Modifiers */
@@ -65,7 +64,7 @@ h1 {
   color: black;
   border: 5px transparent;
   cursor: pointer;
-  margin-bottom: 50px;
+  margin: px;
   text-shadow: 0 0 10px aqua, 0 0 20px blueviolet, 0 0 30px blueviolet,
     0 0 40px aqua;
   font-weight: 700;
