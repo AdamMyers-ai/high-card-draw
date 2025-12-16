@@ -116,6 +116,24 @@ function renderCards() {
   dealerCardEl.className = `card card-large card-shadow ${dealerCard}`;
 }
 
+function getCardValue(card) {
+  // removes the first char of card string
+  const rank = card.slice(1);
+
+  // ranking system
+  if (rank === "A") {
+    return 14;
+  } else if (rank === "K") {
+    return 13;
+  } else if (rank === "Q") {
+    return 12;
+  } else if (rank === "J") {
+    return 11;
+  } else {
+    return Number(rank);
+  }
+}
+
 function compareCards() {
   const playerValue = getCardValue(playerCard);
   const dealerValue = getCardValue(dealerCard);
@@ -145,20 +163,7 @@ function checkWinner() {
   }
 }
 
-function getCardValue(card) {
-  // removes the first char of card string
-  const rank = card.slice(1);
-
-  // ranking system
-  if (rank === "A") {
-    return 14;
-  } else if (rank === "K") {
-    return 13;
-  } else if (rank === "Q") {
-    return 12;
-  } else if (rank === "J") {
-    return 11;
-  } else {
-    return Number(rank);
-  }
+function resetBoard() {
+  playerCardEl.className("card card-large card-back card-shadow");
+  dealerCardEl.className("card card-large card-back card-shadow");
 }
