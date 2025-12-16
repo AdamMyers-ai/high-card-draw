@@ -165,5 +165,7 @@ function compareCards() {
     dealerScore++;
     dealerScoreEl.textContent = dealerScore;
     roundMessageEl.textContent = "Dealer wins the round!";
+  } else {
+    roundMessageEl.textContent = "It's a tie";
   }
 }
