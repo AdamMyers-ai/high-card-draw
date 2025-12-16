@@ -86,6 +86,14 @@ function init() {
   dealerScore = 0;
   round = 0;
   gameOver = false;
+
+  resetBoard();
+}
+
+function resetGame() {
+  init();
+  drawBtnEl.textContent = "Draw Cards";
+  roundMessageEl.textContent = `Click "Draw Cards" To Start!`;
 }
 
 init();
@@ -154,6 +162,8 @@ function checkWinner() {
 function resetBoard() {
   playerCardEl.className = "card card-large card-back card-shadow";
   dealerCardEl.className = "card card-large card-back card-shadow";
+  playerScoreEl.textContent = 0;
+  dealerScoreEl.textContent = 0;
 }
 
 function compareCards() {
@@ -171,8 +181,4 @@ function compareCards() {
   } else {
     roundMessageEl.textContent = "It's a tie!";
   }
-}
-
-function resetGame() {
-  console.log("Reset clicked");
 }
