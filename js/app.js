@@ -110,3 +110,8 @@ function drawCard() {
   // Return card strings from the deck array
   return deck.splice(idx, 1)[0];
 }
+
+function renderCards() {
+  playerCardEl.className = `card card-large card-shadow ${playerCard}`;
+  dealerCardEl.className = `card card-large card-shadow ${dealerCard}`;
+}
