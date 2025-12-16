@@ -1,10 +1,11 @@
 body {
-  background-color: #0b3d2e;
+  background: radial-gradient(circle at top, #145a43, #0b3d2e 70%);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100dvh;
-  color: rgb(19, 80, 160);
+  color: #9c7c19;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
   font-family: "Cinzel", system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
 }
@@ -15,8 +16,7 @@ main {
 
 h1 {
   margin-bottom: 50px;
-  text-shadow: 0 0 10px aqua, 0 0 20px blueviolet, 0 0 30px blueviolet,
-    0 0 40px aqua;
+  letter-spacing: 2px;
 }
 
 .scoreboard {
@@ -24,15 +24,11 @@ h1 {
   justify-content: center;
   margin: 30px;
   gap: 10px;
-  text-shadow: 0 0 10px aqua, 0 0 20px blueviolet, 0 0 30px blueviolet,
-    0 0 40px aqua;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 #round-message {
-  text-shadow: 0 0 10px aqua, 0 0 20px blueviolet, 0 0 30px blueviolet,
-    0 0 40px aqua;
   font-weight: 700;
   margin-bottom: 35px;
 }
@@ -62,11 +58,10 @@ h1 {
   font-size: 1.2rem;
   border-radius: 10px;
   background: none;
-  color: rgb(19, 80, 160);
+  color: #9c7c19;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
   border: 5px transparent;
   cursor: pointer;
-  text-shadow: 0 0 10px aqua, 0 0 20px blueviolet, 0 0 30px blueviolet,
-    0 0 40px aqua;
   font-weight: 700;
   font-family: "Cinzel", system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
