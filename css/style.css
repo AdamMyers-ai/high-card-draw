@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100dvh;
-  color: black;
+  color: rgb(19, 80, 160);
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -61,10 +61,9 @@ h1 {
   font-size: 1.2rem;
   border-radius: 10px;
   background: none;
-  color: black;
+  color: rgb(19, 80, 160);
   border: 5px transparent;
   cursor: pointer;
-  margin: px;
   text-shadow: 0 0 10px aqua, 0 0 20px blueviolet, 0 0 30px blueviolet,
     0 0 40px aqua;
   font-weight: 700;
