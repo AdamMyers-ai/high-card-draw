@@ -110,8 +110,6 @@ function handleDraw() {
   renderCards();
   compareCards();
   checkWinner();
-
-  // setTimeout(resetBoard, 1000);
 }
 
 // Randomly removes one card from the deck
@@ -145,17 +143,18 @@ function getCardValue(card) {
 }
 
 function checkWinner() {
-  if (round === maxRounds) {
+  if (round === maxRounds && playerScore > dealerScore) {
     gameOver = true;
     drawBtnEl.textContent = "Game Over";
-
-    if (playerScore > dealerScore) {
-      roundMessageEl.textContent = "Player wins the game!";
-    } else if (dealerScore > playerScore) {
-      roundMessageEl.textContent = "Dealer wins the game!";
-    } else {
-      roundMessageEl.textContent = "The game is a tie!";
-    }
+    roundMessageEl.textContent = "Player wins the game!";
+  } else if (round === maxRounds && dealerScore > playerScore) {
+    gameOver = true;
+    drawBtnEl.textContent = "Game Over";
+    roundMessageEl.textContent = "Dealer wins the game!";
+  } else if (round === maxRounds && playerScore === dealerScore) {
+    gameOver = true;
+    drawBtnEl.textContent = "Game Over";
+    roundMessageEl.textContent = "The game is a tie!";
   }
 }
 
