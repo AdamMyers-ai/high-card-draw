@@ -17,6 +17,7 @@ const drawBtnEl = document.querySelector("#draw-btn");
 const playerScoreEl = document.querySelector("#player-score");
 const dealerScoreEl = document.querySelector("#dealer-score");
 const roundMessageEl = document.querySelector("#round-message");
+const resetBtnEl = document.querySelector("#reset-btn");
 
 // Event Listeners
 drawBtnEl.addEventListener("click", handleDraw);
@@ -84,8 +85,6 @@ function init() {
   dealerScore = 0;
   round = 0;
   gameOver = false;
-
-  // resetBoard();
 }
 
 init();
@@ -102,6 +101,8 @@ function handleDraw() {
   renderCards();
   compareCards();
   checkWinner();
+
+  // setTimeout(resetBoard, 1000);
 }
 
 // Randomly removes one card from the deck
@@ -167,6 +168,6 @@ function compareCards() {
     dealerScoreEl.textContent = dealerScore;
     roundMessageEl.textContent = "Dealer wins the round!";
   } else {
-    roundMessageEl.textContent = "It's a tie";
+    roundMessageEl.textContent = "It's a tie!";
   }
 }
