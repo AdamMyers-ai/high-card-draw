@@ -131,6 +131,20 @@ function compareCards() {
   }
 }
 
+function checkWinner() {
+  if (round === maxRounds && playerScore > dealerScore) {
+    gameOver = true;
+
+    drawBtnEl.textContent = "Game Over";
+    roundMessageEl.textContent = "Player wins!";
+  } else if (round === maxRounds && dealerScore > playerScore) {
+    gameOver = true;
+
+    drawBtnEl.textContent = "Game Over";
+    roundMessageEl.textContent = "Dealer wins!";
+  }
+}
+
 function getCardValue(card) {
   // removes the first char of card string
   const rank = card.slice(1);
