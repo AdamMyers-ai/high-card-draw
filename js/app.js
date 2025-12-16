@@ -89,6 +89,7 @@ function init() {
   gameOver = false;
   drawBtnEl.textContent = "Draw Cards";
   roundMessageEl.textContent = `First to ${winsNeeded} wins! Click "Draw Cards" To Start!`;
+  drawBtnEl.disabled = false;
 
   resetBoard();
 }
@@ -146,6 +147,7 @@ function checkWinner() {
 
   gameOver = true;
   drawBtnEl.textContent = "Game Over";
+  drawBtnEl.disabled = true;
 
   if (playerScore === winsNeeded) {
     roundMessageEl.textContent = "Player wins the game!";
