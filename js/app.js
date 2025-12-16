@@ -1,5 +1,6 @@
 // Constants
-const maxRounds = 10;
+const bestOf = 5;
+const winsNeeded = Math.ceil(bestOf / 2);
 
 // Variables
 let deck;
@@ -87,7 +88,7 @@ function init() {
   round = 0;
   gameOver = false;
   drawBtnEl.textContent = "Draw Cards";
-  roundMessageEl.textContent = `Click "Draw Cards" To Start!`;
+  roundMessageEl.textContent = `First to ${winsNeeded} wins! Click "Draw Cards" To Start!`;
 
   resetBoard();
 }
@@ -143,17 +144,15 @@ function getCardValue(card) {
 }
 
 function checkWinner() {
-  if (round !== maxRounds) return;
+  if (playerScore < winsNeeded && dealerScore < winsNeeded) return;
 
   gameOver = true;
   drawBtnEl.textContent = "Game Over";
 
-  if (playerScore > dealerScore) {
+  if (playerScore === winsNeeded) {
     roundMessageEl.textContent = "Player wins the game!";
-  } else if (dealerScore > playerScore) {
-    roundMessageEl.textContent = "Dealer wins the game!";
   } else {
-    roundMessageEl.textContent = "The game is a tie!";
+    roundMessageEl.textContent = "Dealer wins the game!";
   }
 }
 
