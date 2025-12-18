@@ -176,12 +176,12 @@ function resetBoard() {
 }
 
 function compareCards() {
+  round++;
+
   const playerValue = getCardValue(playerCard);
   const dealerValue = getCardValue(dealerCard);
 
   if (playerValue > dealerValue) {
-    round++;
-
     if (isRiskRound === true) {
       playerScore += 2;
       roundMessageEl.textContent = `Round ${round}: Risk Win! Player gains 2 points!`;
@@ -192,12 +192,10 @@ function compareCards() {
 
     playerScoreEl.textContent = playerScore;
 
-    if (dealerScore === winsNeeded - 1) {
+    if (playerScore === winsNeeded - 1 || dealerScore === winsNeeded - 1) {
       riskBtnEl.disabled = true;
     }
   } else if (dealerValue > playerValue) {
-    round++;
-
     if (isRiskRound === true) {
       dealerScore += 1;
       playerScore = Math.max(0, playerScore - 1);
@@ -210,7 +208,7 @@ function compareCards() {
     dealerScoreEl.textContent = dealerScore;
     playerScoreEl.textContent = playerScore;
 
-    if (playerScore === winsNeeded || dealerScore === winsNeeded - 1) {
+    if (playerScore === winsNeeded - 1 || dealerScore === winsNeeded - 1) {
       riskBtnEl.disabled = true;
     }
   } else {
