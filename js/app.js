@@ -94,6 +94,7 @@ function init() {
   drawBtnEl.textContent = "Draw Cards";
   roundMessageEl.textContent = `First to ${winsNeeded} wins! Click "Draw Cards" To Start!`;
   drawBtnEl.disabled = false;
+  riskBtnEl.disabled = false;
 
   resetBoard();
 }
@@ -118,6 +119,7 @@ function handleDraw() {
 
 function handleRiskDraw() {
   if (gameOver === true) return;
+  if (deck.length < 2) return;
 
   isRiskRound = true;
   handleDraw();
@@ -157,6 +159,7 @@ function checkWinner() {
   gameOver = true;
   drawBtnEl.textContent = "Game Over";
   drawBtnEl.disabled = true;
+  riskBtnEl.disabled = true;
 
   if (playerScore === winsNeeded) {
     roundMessageEl.textContent = "Player wins the game!";
@@ -178,15 +181,41 @@ function compareCards() {
 
   if (playerValue > dealerValue) {
     round++;
-    playerScore++;
+
+    if (isRiskRound === true) {
+      playerScore += 2;
+      roundMessageEl.textContent = `Round ${round}: Risk Win! Player gains 2 points!`;
+    } else {
+      playerScore += 1;
+      roundMessageEl.textContent = `Round ${round}: Player wins the round!`;
+    }
+
     playerScoreEl.textContent = playerScore;
-    roundMessageEl.textContent = `Round ${round}: Player wins the round!`;
+
+    if (dealerScore === winsNeeded - 1) {
+      riskBtnEl.disabled = true;
+    }
   } else if (dealerValue > playerValue) {
     round++;
-    dealerScore++;
+
+    if (isRiskRound === true) {
+      dealerScore += 1;
+      playerScore -= 1;
+      roundMessageEl.textContent = `Round ${round}: Risk lost. Dealer gains 1 point. Player loses 1 point.`;
+    } else {
+      dealerScore += 1;
+      roundMessageEl.textContent = `Round ${round}: Dealer wins the round!`;
+    }
+
     dealerScoreEl.textContent = dealerScore;
-    roundMessageEl.textContent = `Round ${round}: Dealer wins the round!`;
+    playerScoreEl.textContent = playerScore;
+
+    if (dealerScore === winsNeeded - 1) {
+      riskBtnEl.disabled = true;
+    }
   } else {
     roundMessageEl.textContent = "It's a tie! Draw again.";
   }
+
+  isRiskRound = false;
 }
