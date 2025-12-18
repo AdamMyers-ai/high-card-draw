@@ -200,7 +200,7 @@ function compareCards() {
 
     if (isRiskRound === true) {
       dealerScore += 1;
-      playerScore -= 1;
+      playerScore = Math.max(0, playerScore - 1);
       roundMessageEl.textContent = `Round ${round}: Risk lost. Dealer gains 1 point. Player loses 1 point.`;
     } else {
       dealerScore += 1;
