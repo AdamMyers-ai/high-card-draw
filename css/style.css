@@ -41,20 +41,19 @@ h1 {
   gap: 50px;
 }
 
-/* Card Modifiers */
 .card-large {
   font-size: 25px;
 }
 
 .card-shadow {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
 
 .card-back {
   background-image: url("../images/backs/blue.svg");
 }
 
-/* Button */
+/* Buttons */
 .btn {
   padding: 1rem 2rem;
   font-size: 1.1rem;

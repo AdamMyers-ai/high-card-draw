@@ -10,6 +10,7 @@ let playerScore;
 let dealerScore;
 let round;
 let gameOver;
+let isRiskRound;
 
 // Cached Element References
 const playerCardEl = document.querySelector("#player-card");
@@ -87,6 +88,7 @@ function init() {
   dealerScore = 0;
   round = 0;
   gameOver = false;
+  isRiskRound = false;
   drawBtnEl.textContent = "Draw Cards";
   roundMessageEl.textContent = `First to ${winsNeeded} wins! Click "Draw Cards" To Start!`;
   drawBtnEl.disabled = false;
@@ -112,10 +114,8 @@ function handleDraw() {
   checkWinner();
 }
 
-// Randomly removes one card from the deck
 function drawCard() {
   const idx = Math.floor(Math.random() * deck.length);
-  // Return card strings from the deck array
   return deck.splice(idx, 1)[0];
 }
 
