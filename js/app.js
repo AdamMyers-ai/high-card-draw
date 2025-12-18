@@ -1,5 +1,5 @@
 // Constants
-const bestOf = 5;
+const bestOf = 14;
 const winsNeeded = Math.ceil(bestOf / 2);
 
 // Variables
@@ -20,9 +20,11 @@ const playerScoreEl = document.querySelector("#player-score");
 const dealerScoreEl = document.querySelector("#dealer-score");
 const roundMessageEl = document.querySelector("#round-message");
 const resetBtnEl = document.querySelector("#reset-btn");
+const riskBtnEl = document.querySelector("#risk-btn");
 
 // Event Listeners
 drawBtnEl.addEventListener("click", handleDraw);
+riskBtnEl.addEventListener("click", handleRiskDraw);
 resetBtnEl.addEventListener("click", resetGame);
 
 // Functions
@@ -112,6 +114,13 @@ function handleDraw() {
   renderCards();
   compareCards();
   checkWinner();
+}
+
+function handleRiskDraw() {
+  if (gameOver === true) return;
+
+  isRiskRound = true;
+  handleDraw();
 }
 
 function drawCard() {
