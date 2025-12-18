@@ -210,7 +210,7 @@ function compareCards() {
     dealerScoreEl.textContent = dealerScore;
     playerScoreEl.textContent = playerScore;
 
-    if (dealerScore === winsNeeded - 1) {
+    if (playerScore === winsNeeded || dealerScore === winsNeeded - 1) {
       riskBtnEl.disabled = true;
     }
   } else {
