@@ -48,11 +48,11 @@ The game is styled with a casino-inspired aesthetic:
 - **Logo** created with AI image generation and customized for this project.
 - No external libraries or frameworks were used in the development of this project.
 
-### Play the game
+## Play the game
 
-**Live Demo**: [High Card Draw Demo](https://adammyers-ai.github.io/high-card-draw/)
+### Live Demo: [High Card Draw Demo](https://adammyers-ai.github.io/high-card-draw/)
 
-### Run locally
+### Run locally:
 
 ```bash
 git clone https://github.com/AdamMyers-ai/high-card-draw.git
