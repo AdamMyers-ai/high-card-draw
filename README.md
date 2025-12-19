@@ -1,5 +1,7 @@
 # High Card Draw
 
+![High Card Draw Logo](https://i.imgur.com/gHKtU7Q.png)
+
 High Card Draw is a game inspired by classic casino games. The player and the dealer each draw a single card per round, and the higher card wins the point. The first to reach the required number of wins takes the game.
 
 A **Risk Draw** option allows the player to gamble for extra points with the risk being potentially losing a point if the dealer has the higher card. This adds a bit of strategy and tension to an otherwise simple card game.
