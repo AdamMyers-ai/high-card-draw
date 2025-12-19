@@ -39,7 +39,14 @@ The game is styled with a casino-inspired aesthetic:
 - Game state is managed in JavaScript using DOM manipulation
 - Risk Draw logic dynamically alters scoring and button availability
 
----
+## Attributions
+
+- **Playing card assets** provided by _GA Card Game Starter_ (SVG images for suits, ranks and card backs).
+- **Fonts**:
+  - _Cinzel_ - Google Fonts (used for headings and casino-style lettering)
+  - _Montserrat_ - Google Fonts (used for buttons and UI text)
+- **Logo** created with AI image generation and customized for this project.
+- No external libraries or frameworks were used in the development of this project.
 
 ### Play the game
 
