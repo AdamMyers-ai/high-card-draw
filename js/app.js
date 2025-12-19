@@ -153,28 +153,6 @@ function getCardValue(card) {
   }
 }
 
-function checkWinner() {
-  if (playerScore < winsNeeded && dealerScore < winsNeeded) return;
-
-  gameOver = true;
-  drawBtnEl.textContent = "Game Over";
-  drawBtnEl.disabled = true;
-  riskBtnEl.disabled = true;
-
-  if (playerScore === winsNeeded) {
-    roundMessageEl.textContent = "Player wins the game!";
-  } else {
-    roundMessageEl.textContent = "Dealer wins the game!";
-  }
-}
-
-function resetBoard() {
-  playerCardEl.className = "card card-large card-back card-shadow";
-  dealerCardEl.className = "card card-large card-back card-shadow";
-  playerScoreEl.textContent = 0;
-  dealerScoreEl.textContent = 0;
-}
-
 function compareCards() {
   round++;
 
@@ -216,4 +194,26 @@ function compareCards() {
   }
 
   isRiskRound = false;
+}
+
+function checkWinner() {
+  if (playerScore < winsNeeded && dealerScore < winsNeeded) return;
+
+  gameOver = true;
+  drawBtnEl.textContent = "Game Over";
+  drawBtnEl.disabled = true;
+  riskBtnEl.disabled = true;
+
+  if (playerScore === winsNeeded) {
+    roundMessageEl.textContent = "Player wins the game!";
+  } else {
+    roundMessageEl.textContent = "Dealer wins the game!";
+  }
+}
+
+function resetBoard() {
+  playerCardEl.className = "card card-large card-back card-shadow";
+  dealerCardEl.className = "card card-large card-back card-shadow";
+  playerScoreEl.textContent = 0;
+  dealerScoreEl.textContent = 0;
 }

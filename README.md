@@ -41,7 +41,7 @@ The game is styled with a casino-inspired aesthetic:
 
 ### Play the game
 
-**Live Demo**: https://adammyers-ai.github.io/high-card-draw/
+**Live Demo**: [High Card Draw Demo](https://adammyers-ai.github.io/high-card-draw/)
 
 ### Run locally
 
