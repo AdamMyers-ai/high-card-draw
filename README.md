@@ -47,6 +47,7 @@ The game is styled with a casino-inspired aesthetic:
   - _Montserrat_ - Google Fonts (used for buttons and UI text)
 - **Logo** created with AI image generation and customized for this project.
 - No external libraries or frameworks were used in the development of this project.
+- MDN Web Docs (https://developer.mozilla.org/en-US/)
 
 ## Play the game
 
